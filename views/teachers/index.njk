@@ -1,0 +1,33 @@
+
+
+{% extends 'layout.njk' %}
+
+{% block content%}
+   <div class="login">
+        <div class="login-logo">
+            <h1> <span class="material-icons">beenhere</span> Portal do professor</h1>
+        </div>
+        <div class="area-login">
+           <span class="material-icons">person</span><input type="text" placeholder="LOGIN" >
+           <span class="material-icons">lock </span>  <input type="password" placeholder="SENHA">
+             <input type="submit" value="ENTRAR">
+        </div>
+   </div>
+
+   <div class="card">
+   <section class="form">
+   <h3>Dados Pessoais</h3>
+        <input type="text" placeholder="Nome completo">
+        <input type="date" placeholder="Digite">
+        <input type="text" placeholder="Grau de escolaridade">
+        <span><input type="radio" name="type_aula" value="P"  checked>Presencial </span>
+        <span><input type="radio" name="type_aula" value="D">Distância </span>
+   </section>
+
+   <section class="avatar">
+   </section>
+   
+   
+   
+   </div>
+{% endblock content%}

@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+:root{
+    --padrao-color:#004A39;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    max-width: 1600px;
+    width: 100%;
+}
+
+body{
+    background-color: #ccc;
+}
+header{
+       background-color: #109D7C;
+       width: 100%;
+}
+
+header .container{
+    width: 100%;
+    padding: 32px;
+    text-align: center;
+    background-color: #109D7C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+header .logo h3{
+    font-size: 38px;
+    font-weight: normal;
+    color: var(--padrao-color);
+}
+
+nav{
+    font-size: 22px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    text-shadow: 0px 0px 1px ;
+}
+nav a:hover{
+    color: var(--padrao-color);
+    transition: 700ms;
+}
+
+nav a + a{
+    margin-left: 32px;
+}
+
+nav a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--padrao-color);
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+}
+
+nav a:hover::after{
+    width: 100%;
+    transition: width 700ms ease-in-out ;
+}
+
+/* AREA LOGIN */
+
+.login{
+    display: flex;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--padrao-color);
+
+}
+.area-login{
+    display: flex;
+    align-items: center;
+
+}
+.area-login span{
+    color: #fff;
+    font-size: 50px;
+    padding: 10px;
+}
+
+.login-logo h1{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 48px;
+    font-weight: 400;
+}
+.login-logo h1 span{
+     font-size: 38px;
+       color: #fff;
+}
+
+input{
+ height: 50px;
+ padding: 8px;
+ font-size: 16px;
+font-weight: 100;
+color: var(--padrao-color)
+}
+
+input::placeholder{
+font-size: 16px;
+font-weight: 100;
+color: var(--padrao-color)
+
+}
+
+.area-login{
+    
+}
+
+input[type='submit']{
+color: #fff;
+background-color: #109D7C;
+cursor: pointer;
+transition: 0.5s;
+border:0;
+
+}
+
+/* ===card === */
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid red;
+}
+
+.card .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
