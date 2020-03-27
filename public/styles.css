@@ -81,7 +81,6 @@ nav a:hover::after{
 
 .login{
     display: flex;
-    max-width: 1300px;
     width: 100%;
     margin: 0 auto;
     align-items: center;
@@ -143,14 +142,86 @@ border:0;
 /* ===card === */
 
 .card{
+   
+  
+    width: 800px;
+    min-width: 400px;
+    margin: 32px auto;
+    background-color: #fff;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border:1px solid red;
+    grid-template-columns: 1fr 1fr;
+
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+    animation-name: up;
+    animation-duration: 700ms;
+    animation-timing-function:ease-in-out;
 }
 
-.card .form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+@keyframes up{
+    from{
+          opacity: 0;
+          transform: translateY(15px);
+    }
+    to{
+       opacity: 1;
+    }
+    }
+
+
+
+/* === details === */
+.avatar{
+   width: 40%;
+}
+
+.details{
+    padding: 32px;
+    width: 60%;
+}
+
+.details .item{
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    padding: 16px 0;
+}
+
+.details .item:last-child{
+    border-bottom: none;
+}
+
+.details h3,
+.details .item div:nth-child(1){
+font-size: 16px;
+line-height: 32px;
+color: #777;
+letter-spacing: 2px;
+font-weight: 700;
+}
+
+.details .item div:nth-child(2){
+    color:#555;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.details h3{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--padrao-color);
+}
+
+.details .item div:nth-child(2) span{
+    padding: 8px 16px;
+    background-color: var(--padrao-color);
+    border-radius: 16px;
+    color: #777;
+    margin-right: 4px;
+    margin-top: 8px;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+
 }
