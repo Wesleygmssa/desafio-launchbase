@@ -111,7 +111,7 @@ nav a:hover::after{
        color: #fff;
 }
 
-input{
+/* input{
  height: 50px;
  padding: 8px;
  font-size: 16px;
@@ -137,14 +137,14 @@ cursor: pointer;
 transition: 0.5s;
 border:0;
 
-}
+} */
 
 /* ===card === */
 
 .card{
    
   
-    width: 800px;
+    width: 1200px;
     min-width: 400px;
     margin: 32px auto;
     background-color: #fff;
@@ -224,4 +224,38 @@ font-weight: 700;
     text-transform: uppercase;
     font-size: 12px;
 
+}
+
+/* === FORM ====*/
+
+input{
+    width: 100%;
+    outline: none;
+    border: none;
+     font-size: 16px;
+    font-weight: normal;
+
+}
+
+input[type="radio"]{
+    width: initial;
+    margin-right: 4px;
+    border: 1px solid red;
+}
+
+input::placeholder{
+    font-size: 16px;
+    font-weight: normal;
+    
+}
+
+button[type="submit"]{
+    padding: 8px 32px;
+    background-color: var(--padrao-color);
+    border-radius: 4px;
+    margin-top: 32px;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
 }
