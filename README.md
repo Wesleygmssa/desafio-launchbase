@@ -4,9 +4,7 @@
 
 <h2 align="center">
 
-  <img alt="Desafio_04" src=".github/rocket.svg" width="200px" />
-  <br/>
-  🚀 LaunchBase
+  🚀 LaunchBase Desafio_04
 </h2>
 
 <p align="center">
