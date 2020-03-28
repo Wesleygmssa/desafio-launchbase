@@ -4,9 +4,9 @@
 
 <h2 align="center">
 
-  <img alt="Controle academia" src=".github/rocket.svg" width="200px" />
+  <img alt="Desafio_04" src=".github/rocket.svg" width="200px" />
   <br/>
-  🚀 Semana Omnistack 11.0
+  🚀 LaunchBase
 </h2>
 
 <p align="center">
