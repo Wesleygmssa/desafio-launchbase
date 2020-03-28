@@ -1,0 +1,20 @@
+{
+  "teachers": [
+    {
+      "avatar_url": "https://google.com",
+      "name": "Wesley Guerra Moreira",
+      "birth": "1990-10-01",
+      "grau": "Doutorado",
+      "typeaula": "P",
+      "services": "s"
+    },
+    {
+      "avatar_url": "https://avatars2.githubusercontent.com/u/41512408?s=460&v=4",
+      "name": "Wesley Guerra Moreira",
+      "birth": "1990-10-01",
+      "grau": " Ensino Superior Completo",
+      "typeaula": "D",
+      "services": "Análise Desenvolvimento de sistemas"
+    }
+  ]
+}
