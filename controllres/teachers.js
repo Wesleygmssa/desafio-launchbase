@@ -5,7 +5,7 @@
 exports.post = (req, res) => {
     const keys = Object.keys(req.body)
 
-    for (key of keys) {
+    for (key of keys) { // verificação dos campos do no formulario.
         if (req.body[key] == "") {
             return res.send('Please, fill all fields')
         }
@@ -15,7 +15,7 @@ exports.post = (req, res) => {
 
 
 
-    return res.send(keys)
+    return res.send(req.body)
 
 
 }
