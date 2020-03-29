@@ -36,6 +36,8 @@ O **Be The teachers** é um projeto que de cadastramento de professores e aluno.
 
 <img src="page_01.png" width="100%" height="100%" />
 
+<img src="page_02.png" width="100%" height="100%" />
+
 
 ## 🤔 Como contribuir
 
