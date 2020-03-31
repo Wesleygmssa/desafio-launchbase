@@ -1,5 +1,5 @@
 const express = require('express');
-const teachers = require('./teachers')
+const teachers = require('./controllers/teachers')
 const routes = express.Router();
 
 
@@ -20,8 +20,13 @@ routes.get('/teachers/create', (req, res) => {
     return res.render('teachers/create')
 })
 
-routes.get('/teachers/:id',teachers.show)// exibindo dados
 routes.post("/teachers", teachers.post)// salvando dados
+
+routes.get('/teachers/:id',teachers.show)// exibindo dados
+
+routes.get('/teachers/:id/edit', teachers.edit) // editando dados
+
+routes.put('/teachers', teachers.put) // atualizando dados
 
 
 

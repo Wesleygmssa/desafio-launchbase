@@ -42,7 +42,24 @@ module.exports = {
         }
        
         return graduation
-} 
+} ,
+
+date: (timestamp)=>{
+    const date = new Date(timestamp)
+
+    //YYYY
+    const year = date.getUTCFullYear()
+
+    //mm
+    const month = `0${date.getUTCMonth() + 1}`.slice(-2)
+
+    //dd
+    const day = `0${date.getUTCDay()}`.slice(-2)
+   
+    return `${year}-${month}-${day}`
+}
+
+
 }
 
 

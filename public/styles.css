@@ -216,13 +216,14 @@ font-weight: 700;
     padding: 8px 16px;
     background-color: var(--padrao-color);
     border-radius: 16px;
-    color: #777;
+    color: #fff;
     margin-right: 4px;
     margin-top: 8px;
     display: inline-block;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 12px;
+    letter-spacing: 2px;
 
 }
 
@@ -249,7 +250,8 @@ input::placeholder{
     
 }
 
-button[type="submit"]{
+button[type="submit"],
+a.button{
     padding: 8px 32px;
     background-color: var(--padrao-color);
     border-radius: 4px;
@@ -258,4 +260,12 @@ button[type="submit"]{
     color: #fff;
     font-size: 16px;
     cursor: pointer;
+}
+
+a.button{
+    margin-top: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    text-align: center;
 }
