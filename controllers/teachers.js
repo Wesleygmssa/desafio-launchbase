@@ -124,6 +124,48 @@ exports.put = function (req, res) {
 }
 
 
+exports.delete = function (req, res) {
+    const { id } = req.body
+
+    const filterredteachers = data.teachers.filter(function (teacher) {
+        return teacher.id != id
+    })
+
+    data.teachers = filterredteachers
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
+
+        if (err) return res.send("write file error")
+
+        return res.redirect('/teachers')
+
+    })
+
+}
+
+
+// exports.delete = (req , res) =>{
+//     const { id } = req.body
+
+//     const filteredTeachers = data.teachers.filter((teacher)=>{
+//         if( teacher.id != id){
+//             return true
+//         }
+//     })
+
+//     data.teacher = filteredTeachers
+
+//   fs.watchFile("data.json", JSON.stringify(data, null, 2), (err)=>{
+//     if(err){
+//         return res.send("write file error");
+
+//     }
+
+//     return res.redirect('/teachers')
+//   })
+// }
+
+
 //indentificar o erro depois
 // exports.put = (req ,res) =>{
     

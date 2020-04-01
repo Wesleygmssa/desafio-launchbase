@@ -28,6 +28,8 @@ routes.get('/teachers/:id/edit', teachers.edit) // editando dados
 
 routes.put('/teachers', teachers.put) // atualizando dados
 
+routes.delete("/teachers", teachers.delete) //deletando 
+
 
 
 
