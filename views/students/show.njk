@@ -1,0 +1,56 @@
+
+
+{% extends 'layout.njk' %}
+
+{% block content%}
+
+   <div class="card">
+   <section class="details">
+   <h3>Dados Pessoais</h3>
+   
+   <div class="item">
+          <div>Teacher</div>
+          <div>{{student.name}}</div>
+   </div>
+
+   <div class="item">
+          <div>Idade</div>
+          <div>{{student.age}}</div>
+   </div>
+
+   <div class="item">
+          <div>Grau de escolaridade</div>
+          <div>
+             {{student.grau}}
+          </div>
+   </div>
+
+    <div class="item">
+          <div>Tipo de aula</div>
+          <div>
+             {{"Distância" if student.typeaula == "D" else "Presencial" }}
+          </div>
+   </div>
+
+   <div class="item">
+          <div>Acompanhamento</div>
+          <div>
+        {% for service in student.services%}
+          <span>{{service}}</span>
+        {%endfor%} 
+          </div>
+   </div>
+
+   <div class="item">
+          <div>Desde</div>
+       <div>{{student.created_at}} </div>
+   </div>
+    <a href="/students/{{student.id}}/edit" class="button">Editar</a>
+   </section>
+
+   <section class="avatar" style="background: url({{student.avatar_url}}) no-repeat center center /cover"></section>
+   
+
+   
+   </div>
+{% endblock content%}

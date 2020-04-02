@@ -4,7 +4,7 @@
                             <input type="url"
                             name="avatar_url"
                             placeholder="http://"
-                            value="{{teacher.avatar_url}}"
+                            value="{{student.avatar_url}}"
                             >
                          </div>
                  </div>
@@ -15,7 +15,7 @@
                             <input type="text"
                             name="name"
                              placeholder="Nome do Teacher"
-                              value="{{teacher.name}}"
+                              value="{{student.name}}"
                             >
                          </div>
                  </div>
@@ -25,7 +25,7 @@
                          <div>
                             <input type="date"
                             name="birth"
-                             value="{{teacher.birth}}"
+                             value="{{student.birth}}"
                             >
                          </div>
                   </div>
@@ -36,19 +36,19 @@
                  
                    <select name="grau" >
                      <option value="medio"
-                         {% if teacher.grau =="medio"%} selected {%endif%}>
+                         {% if student.grau =="medio"%} selected {%endif%}>
                            Ensino médio completo
                       </option>
                      <option value="superior"
-                         {% if teacher.grau =="superior"%} selected {%endif%}>
+                         {% if student.grau =="superior"%} selected {%endif%}>
                            Ensino superior completo
                       </option>
                      <option value="mestrado"
-                         {% if teacher.grau =="mestrado"%} selected {%endif%}>
+                         {% if student.grau =="mestrado"%} selected {%endif%}>
                            Mestrado completo
                       </option>
                      <option value="doutorado"
-                         {% if teacher.grau =="doutorado" %} selected {%endif%}>
+                         {% if student.grau =="doutorado" %} selected {%endif%}>
                            Doutorado completo
                       </option>
 
@@ -61,11 +61,11 @@
                      <div>Tipo de aula</div>
                       <div>
                             <span><input type="radio" name="typeaula" value="P"
-                             {% if teacher.typeaula == 'P' %} 
+                             {% if student.typeaula == 'P' %} 
                                  checked
                              {%endif%}>Presencial</span>
                              <span><input type="radio" name="typeaula" value="D" 
-                             {% if teacher.typeaula == 'D' %} 
+                             {% if student.typeaula == 'D' %} 
                                  checked
                                {%endif%}>Distância</span>
                       </div>
@@ -77,7 +77,7 @@
                               <input type="text" 
                               name="services" 
                               placeholder="Separe os serviços prestado por virgula"
-                              value="{{teacher.services}}">
+                              value="{{student.services}}">
                            </div>
                     </div>
         <button type="submit">Salvar</button>

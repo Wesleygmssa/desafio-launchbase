@@ -5,7 +5,20 @@ const { age, graduation, date} = require('../utils');
 const Intl = require('intl');
 
 
-//create
+
+
+
+exports.index = (req ,res) =>{
+
+        
+    return res.render('teachers/index',{teachers: data.teachers})
+}
+
+exports.create = (req, res) => {
+
+    return res.render('teachers/create')
+}
+
 exports.post = (req, res) => {
     const keys = Object.keys(req.body)
 
@@ -44,7 +57,7 @@ exports.post = (req, res) => {
 
 
 }
-//exibição de dados
+
 exports.show = (req, res) =>{
     const {id} = req.params
 
@@ -69,29 +82,25 @@ exports.show = (req, res) =>{
     return res.render("teachers/show", { teacher})// passando do data.json
 }
 
-//somente pagina onde aparece os dados no put que faz a atualização
 exports.edit = (req ,res)=>{
     const { id } = req.params
 
-    const foundTeacher = data.teachers.find((teachers) => {
+    const foundteacher = data.teachers.find((teachers) => {
         return teachers.id == id
     })
 
-    if (!foundTeacher) {
+    if (!foundteacher) {
         return res.send("Teachers not found")
     }
 
     const teacher = {
-        ...foundTeacher,
-        birth: date(foundTeacher.birth)
+        ...foundteacher,
+        birth: date(foundteacher.birth)
     }
-    
 
     return res.render('teachers/edit', { teacher})
 }
 
-
-//put
 exports.put = function (req, res) {
 
     const { id } = req.body
@@ -123,15 +132,14 @@ exports.put = function (req, res) {
     })
 }
 
-
 exports.delete = function (req, res) {
     const { id } = req.body
 
-    const filterredteachers = data.teachers.filter(function (teacher) {
+    const filterteachers = data.teachers.filter(function (teacher) {
         return teacher.id != id
     })
 
-    data.teachers = filterredteachers
+    data.teachers = filterteachers
 
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
 
@@ -142,6 +150,34 @@ exports.delete = function (req, res) {
     })
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // exports.delete = (req , res) =>{

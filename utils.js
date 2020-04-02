@@ -7,28 +7,26 @@
 //12 - 12 = 0 
 //13 - 12 = 1
 module.exports = {
-    age: function (timestamp){
-
+    //654739200000
+    age: function (timestamp) {
         const today = new Date() // dd/mm/yy de hoje
         const birthDate = new Date(timestamp) // data aniversario da pessoa
 
-    //2020 - 1990 // ano 30
-    let age = today.getFullYear() - birthDate.getFullYear();
-    // let age = today.getUTCFullYear() - birthDate.getFullYear()
+        //2019 - 1990 = 30
+        let age = today.getUTCFullYear() - birthDate.getFullYear()
+        // Mês
+        const month = today.getUTCMonth() - birthDate.getMonth()
 
-    const month = today.getUTCMonth() - birthDate.getMonth()
+        today.getUTCDate() // dia atual
+        birthDate.getUTCDate() // dia do aniversario
 
-    today.getDate()
-    birthDate.getDate()
-    // mes
-    //11 - 12 // mes -1
-    //11 - 11 // 0
-    if (month < 0 || month == 0 && today.getDate() <= birthDate.getDate()) {
-        age = age - 1
-    }
+        if (month < 0 || month == 0 && today.getUTCDate() <= birthDate.getUTCDate()) {
+            age = age - 1
+        }
 
-    return age
-},
+        return age
+    },
+
 
 
     graduation: (grau)=>{
@@ -37,8 +35,10 @@ module.exports = {
         return    grau = "Ensino Médio Completo"
         }if (grau == "superior" ){
             return grau = "Ensino superior Completo"
-        } if (grau){
-            return grau 
+        } if (grau == "mestrado"){
+            return grau = "Mestrado completo"
+        } if (grau == "doutorado") {
+            return grau = "Doutorado completo"
         }
        
         return graduation

@@ -12,6 +12,8 @@
     font-family: 'Roboto', sans-serif;
 }
 
+
+
 .container{
     max-width: 1600px;
     width: 100%;
@@ -75,6 +77,10 @@ nav a::after{
 nav a:hover::after{
     width: 100%;
     transition: width 700ms ease-in-out ;
+}
+
+.active{
+    color: var(--padrao-color);
 }
 
 /* AREA LOGIN */
@@ -241,7 +247,7 @@ input{
 input[type="radio"]{
     width: initial;
     margin-right: 4px;
-    border: 1px solid red;
+  
 }
 
 input::placeholder{
@@ -268,9 +274,87 @@ a.button{
     font-size: 20px;
     display: block;
     text-align: center;
+   
 }
 
-#form-delete button[type="submit"]{
+.form-delete button{
     background-color: firebrick;
     margin-top: 8px;
+    border:none;
+
 }
+
+/* ==INDEX TEACHER ==== */
+
+.table-container{
+    display: block;
+    padding: 40px;
+  
+   
+}
+
+.table-conatiner table{
+    border-spacing: 0;
+}
+
+.table-container thead tr th{
+    text-align: left;
+  
+}
+
+td,th{
+    padding: 16px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+th{
+    text-transform: uppercase;
+    color:#777;
+    font-size: 14px;;
+}
+
+tbody tr:last-child td{
+    border-bottom: none;
+    
+}
+
+tbody tr td:first-child {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    align-items: center;
+}
+
+tbody tr td:first-child span{
+    width: 48px;
+    height: 48px;
+    background-position: center;
+    background-size: cover;
+}
+
+tbody tr td a:nth-child(1){
+   background-color: var(--padrao-color);
+   color: #fff;
+   text-decoration: none;
+    border-radius: 6px;
+    text-align: center;
+    padding: 0px 23px;
+    margin-bottom: 4px;
+    display: block;
+
+}
+
+tbody tr td:nth-child(3) {
+   
+}
+
+form input:nth-child(2){
+   background-color: firebrick;
+   color: #fff;
+   text-decoration: none;
+   cursor: pointer;
+   border-radius: 6px;
+   
+ 
+   
+}
+

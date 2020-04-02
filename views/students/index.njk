@@ -1,1 +1,68 @@
+
+
 {% extends 'layout.njk' %}
+
+{% block content%}
+   {# <div class="login">
+        <div class="login-logo">
+            <h1> <span class="material-icons">beenhere</span> Portal do professor</h1>
+        </div>
+        <div class="area-login">
+           <span class="material-icons">person</span><input type="text" placeholder="LOGIN" >
+           <span class="material-icons">lock </span>  <input type="password" placeholder="SENHA">
+             <input type="submit" value="ENTRAR">
+        </div>
+   </div> #}
+
+   <div class="card table-container">
+       
+       <table width="100%">
+              <thead > {# Cabeçalho #}
+                   
+                     <tr>{# Linha #}
+                          
+                         <th>Teacher</th>
+                         <th>Matérias</th>
+                         <th>Ação</th>
+                     </tr>
+              </thead>
+              <tbody> {# corpo da tabela #}
+              {% for student in students %}
+                     <tr>
+
+                       <td>
+                          <span 
+                          
+                                style="background-image: url({{student.avatar_url}})">
+                          
+                          </span>
+                          {{student.name}}
+                      </td> {# coluna da tabela, nome e foto #}
+                      
+                      
+                      <td>
+                            {{student.services}}
+                      </td>{# serviços #}
+
+                      
+                       <td> 
+                       
+                            <a href="/students/{{student.id}}">Ver</a>
+
+                           <form  action="/students?_method=DELETE" method="post">
+                                <input type="hidden" name="id" value={{student.id}} >
+                                <input type="submit" value="Deletar">
+                           </form>
+                            
+                       </td>{# botões de ação #}
+
+                   
+                     </tr>
+               {%endfor%}      
+             </tbody>
+       </table>
+   
+   
+   
+   </div>
+{% endblock content%}
