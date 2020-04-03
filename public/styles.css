@@ -331,7 +331,8 @@ tbody tr td:first-child span{
     background-size: cover;
 }
 
-tbody tr td a:nth-child(1){
+tbody tr td a:nth-child(1),
+.table-container > a{
    background-color: var(--padrao-color);
    color: #fff;
    text-decoration: none;
@@ -340,7 +341,9 @@ tbody tr td a:nth-child(1){
     padding: 0px 23px;
     margin-bottom: 4px;
     display: block;
-
+}
+.table-container > a{
+    max-width: 200px;
 }
 
 tbody tr td:nth-child(3) {
