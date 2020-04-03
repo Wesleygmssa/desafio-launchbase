@@ -49,7 +49,7 @@
                        
                             <a href="/teachers/{{teacher.id}}">Ver</a>
 
-                           <form  action="/teachers?_method=DELETE" method="post">
+                           <form class="form-delete"   action="/teachers?_method=DELETE" method="post">
                                 <input type="hidden" name="id" value={{teacher.id}} >
                                 <input type="submit" value="Deletar">
                            </form>

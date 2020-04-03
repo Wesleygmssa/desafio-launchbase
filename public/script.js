@@ -7,3 +7,13 @@ for (item of menuItems){
         item.classList.add("active")
     }
 }
+
+
+const formDelete = document.querySelector(".form-delete")
+
+formDelete.addEventListener("submit", (event)=>{
+    const confirmation = confirm("Deseja Deletar?") //confirmação
+    if(!confirmation){
+      event.preventDefault() // cancela o padrão de enviar o formulario
+  }
+})
